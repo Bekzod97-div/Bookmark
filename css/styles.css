@@ -22,6 +22,7 @@
     --btn-color: #fa5959;
     --text-dark: #242a45;
     --text-color: #9194a2;
+    --text-darker: rgba(36, 42, 69, 0.75);
 }
 
 /* global styles */
@@ -93,15 +94,25 @@ img {
 
 /* Button styles */
 .main-btn {
+    display: inline-block;
     text-decoration: none;
     border-radius: 5px;
-    padding: 10px 24px;
+    padding: 9px 23px;
+    border: 1px solid transparent;
     background-color: var(--brand-color);
     color: #fff;
     font-weight: 500;
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.25px;
+    transition: background-color 0.3s ease,
+    border-color 0.3s ease, color 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: inherit;
+    border-color: var(--brand-color);
+    color: var(--brand-color);
 }
 
 /* Site Header */
@@ -161,7 +172,8 @@ img {
 
 /* Site nav button */
 .sitenav__btn {
-    padding: 11px 31px 10px 33px;
+    margin-bottom: 6px;
+    padding: 6px 31px 5px 33px;
     background-color: var(--btn-color);
     border: 1px solid transparent;
     transition: background-color 0.3s ease,
@@ -228,7 +240,12 @@ img {
 
 /* Hero info link */
 .hero__info__link {
-    background-color: #dcdada;
-    color: var(--text-dark);
+    background-color: rgb(232, 230, 230);
+    color: var(--text-darker);
     margin-left: 16px;
+}
+
+.hero__info__link:hover {
+    border-color: var(--text-darker);
+    color: var(--text-darker);
 }
