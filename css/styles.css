@@ -1,3 +1,35 @@
+/* Fonts */
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-Medium.woff2) format("woff2"),
+        url(../fonts/Rubik-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-Regular.woff2) format("woff2"),
+        url(../fonts/Rubik-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --brand-color: #5267df;
+    --btn-color: #fa5959;
+    --text-dark: #242a45;
+    --text-color: #9194a2;
+}
+
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -11,16 +43,14 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     height: 100%;
     padding: 0;
     margin: 0;
-    font-size: 16px;
-    font-family: "Arial", sans-serif;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #222;
+    font-size: 18px;
+    font-family: "Rubik", "Arial", sans-serif;
+    line-height: 28px;
+    background-color: #f2f2f2;
+    color: var(--text-color);
 }
 
 img {
@@ -28,13 +58,49 @@ img {
     height: auto;
 }
 
-.container {
+.lg-container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.md-container {
+    width: 100%;
+    max-width: 950px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button styles */
+.main-btn {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    background-color: var(--brand-color);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+}
+
+/* Site Header */
+.site__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+.site__logo:hover {
+    opacity: 0.8;
+}
+.site-logo:active {
+    opacity: 0.6;
 }
 
 /* Main content */
