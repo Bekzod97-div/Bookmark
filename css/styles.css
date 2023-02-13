@@ -252,7 +252,8 @@ img {
 
 /* Features */
 .features__container {
-    background-image: none;
+    background-position: left -400px bottom;
+    padding-bottom: 90px;
 }
 
 .features__header {
@@ -299,4 +300,33 @@ img {
     line-height: 17px;
     color: var(--text-darker);
     cursor: pointer;
+}
+
+/* Features info */
+.features__info__container {
+    margin-top: 72px;
+}
+
+.features__info {
+    display: flex;
+    align-items: center;
+}
+
+.feature__info__img {
+    display: flex;
+    width: 536px;
+    height: 346px;
+    margin-right: 125px;
+}
+
+.features__info__content {
+    width: 100%;
+    max-width: 445px;
+}
+
+.features__info__heading {
+    text-align: unset;
+}
+.features__info__text {
+    margin-bottom: 32px;
 }
