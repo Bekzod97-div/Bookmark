@@ -485,10 +485,11 @@ img {
     color: var(--text-dark);
 }
 
-.faq__img {
+.path {
     display: flex;
     width: 16px;
     height: 8px;
+    color: var(--brand-color);
 }
 
 /* FAQ main btn */
