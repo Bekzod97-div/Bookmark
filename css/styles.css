@@ -290,39 +290,38 @@ img {
     max-width: 730px;
     display: flex;
     align-items: center;
-    padding-left: 41px;
-    padding-right: 70px;
     margin: 0;
     list-style: none;
+    border-bottom: 1px solid rgba(73, 93, 207, 0.20012);;
 }
 
-.line {
-    position: absolute;
-    top: 280px;
-    width: 730px;
-    height: 1px;
-    background-color: rgba(73, 93, 207, 0.20012);
-}
-
-.featuresnav__item:not(:last-child) {
-    margin-right: 90px;
+.featuresnav__item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 243px;
 }
 
 .featuresnav__link {
-    display: block;
-    border: 4px solid transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
     padding-bottom: 32px;
     font-size: 16px;
     line-height: 17px;
     color: var(--text-darker);
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
     cursor: pointer;
 }
 
 .featuresnav__link:hover,
 .featuresnav__link:active {
-    color: var(--text-dark);
+    color: var(--btn-color);
     border-bottom: 4px solid var(--btn-color);
-    padding-bottom: 32px;
 }
 
 /* Features info */
@@ -465,18 +464,22 @@ img {
 }
 .faq__btn {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: inherit;
     padding-top: 19px;
     padding-bottom: 13px;
     padding-right: 20px;
     border: 0;
     border-top: 1px solid rgba(36, 42, 69, 0.15);
+    cursor: pointer;
 }
 .faq__btn:nth-child(4) {
     border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+}
+
+.faq__btn__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .faq__btn__text {
@@ -484,12 +487,29 @@ img {
     line-height: 32px;
     color: var(--text-dark);
 }
+.js-faq__btn__text {
+    color: var(--btn-color);
+}
 
 .path {
     display: flex;
     width: 16px;
     height: 8px;
     color: var(--brand-color);
+}
+.js-svg {
+    color: var(--btn-color);
+    transform: rotateY(180deg);
+}
+/* FAQ description  */
+.faq__btn__description {
+    display: none;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: var(--text-darker);
+    margin-top: 32px;
+    margin-bottom: 29px;
 }
 
 /* FAQ main btn */
