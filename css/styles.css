@@ -303,6 +303,10 @@ img {
     width: 243px;
 }
 
+.js-featuresnav__item {
+    border-bottom: 4px solid var(--btn-color);
+}
+
 .featuresnav__link {
     width: 100%;
     display: flex;
@@ -314,14 +318,12 @@ img {
     line-height: 17px;
     color: var(--text-darker);
     text-decoration: none;
-    border-bottom: 4px solid transparent;
     cursor: pointer;
 }
 
 .featuresnav__link:hover,
 .featuresnav__link:active {
     color: var(--btn-color);
-    border-bottom: 4px solid var(--btn-color);
 }
 
 /* Features info */
@@ -471,6 +473,7 @@ img {
     border: 0;
     border-top: 1px solid rgba(36, 42, 69, 0.15);
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 .faq__btn:nth-child(4) {
     border-bottom: 1px solid rgba(36, 42, 69, 0.15);
