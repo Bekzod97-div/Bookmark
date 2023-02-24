@@ -334,6 +334,9 @@ img {
     margin-top: 72px;
     padding-bottom: 90px;
 }
+.js-features__info__container {
+    display: block;
+}
 
 
 
