@@ -543,6 +543,10 @@ img {
     padding-bottom: 29px;
 }
 
+.accardion__item-text:not(:last-child) {
+    margin-bottom: 12px;
+}
+
 .faq__accordion--open .accordion__item-content {
     display: block;
 }
