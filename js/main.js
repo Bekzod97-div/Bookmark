@@ -1,3 +1,10 @@
+const modifiers = {
+  featuresActive: 'js-featuresnav__item',
+  accordionOpen: 'faq__accordion--open',
+  accordionItem: '.faq__accordion',
+  infoContainer: 'js-features__info__container'
+}
+
 // Features
 const elsTabItem = document.querySelectorAll('.featuresnav__item');
 const elsLink = document.querySelectorAll('.js-featuresnav__link');
@@ -5,13 +12,13 @@ const elsFeaturesInfo = document.querySelectorAll('.features__info__container');
 
 function deactivateTabItems() {
   elsTabItem.forEach(function (elTabItem) {
-    elTabItem.classList.remove('js-featuresnav__item');
+    elTabItem.classList.remove(modifiers.featuresActive);
   });
 };
 
 function deactivateFeaturesInfo() {
   elsFeaturesInfo.forEach(function (elFeaturesInfo) {
-    elFeaturesInfo.classList.remove('js-features__info__container');
+    elFeaturesInfo.classList.remove(modifiers.infoContainer);
   });
 };
 
@@ -29,22 +36,22 @@ elsLink.forEach(function (elLink) {
     // Show clicked panel
     // const elActiveFeaturesInfo = document.querySelector(`#${elLink.href.split('#')[1]}`);
     const elActiveFeaturesInfo = document.querySelector(elLink.dataset.tab);
-    elActiveFeaturesInfo.classList.add('js-features__info__container');
+    elActiveFeaturesInfo.classList.add(modifiers.infoContainer);
 
 
     // Add active class to featuresnav__item classlist
-    elLink.parentElement.classList.add('js-featuresnav__item');
+    elLink.parentElement.classList.add(modifiers.featuresActive);
   })
 })
 
 
   // FAQ
   const elsButton = document.querySelectorAll('.accordion__item-toggler');
-  const elsFaqAccordion = document.querySelectorAll('.faq__accordion');
+  const elsFaqAccordion = document.querySelectorAll(modifiers.accordionItem);
 
   function closeAccardion() {
     elsTabItem.forEach(function (elFaqAccordion) {
-      elFaqAccordion.classList.remove('faq__accordion--open');
+      elFaqAccordion.classList.remove(modifiers.accordionOpen);
     });
   };
 
@@ -52,6 +59,6 @@ elsLink.forEach(function (elLink) {
     elButton.addEventListener('click', function() {
       closeAccardion();
 
-      elButton.closest('.faq__accordion').classList.toggle('faq__accordion--open');
+      elButton.closest(modifiers.accordionItem).classList.toggle(modifiers.accordionOpen);
     });
   });
