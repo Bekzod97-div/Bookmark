@@ -39,13 +39,19 @@ elsLink.forEach(function (elLink) {
 
 
   // FAQ
-  const elsButton = document.querySelectorAll('.faq__btn');
-  const elsDescription = document.querySelectorAll('.faq__btn__description');
-  const elsIcon = document.querySelectorAll('.faq-svg');
+  const elsButton = document.querySelectorAll('.accordion__item-toggler');
+  const elsFaqAccordion = document.querySelectorAll('.faq__accordion');
 
-  elsButton.forEach(function (elsButton, index) {
-    elsButton.addEventListener('click', function() {
-      elsDescription[index].classList.toggle('js__faq__btn__description');
-      elsIcon[index].classList.toggle('rotate');
+  function closeAccardion() {
+    elsTabItem.forEach(function (elFaqAccordion) {
+      elFaqAccordion.classList.remove('faq__accordion--open');
     });
-  })
+  };
+
+  elsButton.forEach(function (elButton) {
+    elButton.addEventListener('click', function() {
+      closeAccardion();
+
+      elButton.closest('.faq__accordion').classList.toggle('faq__accordion--open');
+    });
+  });
