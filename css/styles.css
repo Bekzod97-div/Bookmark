@@ -132,10 +132,10 @@ img {
     margin-top: 48px;
     margin-bottom: 108px;
 }
-.site-logo:hover {
+.logo:hover {
     opacity: 0.8;
 }
-.site-logo:active {
+.logo:active {
     opacity: 0.6;
 }
 
@@ -410,7 +410,9 @@ img {
 /* Extensions info */
 .extensions__info {
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-bottom: 4px dotted rgba(73, 93, 207, 0.20012);
     margin-bottom: 24px;
 }
@@ -545,67 +547,6 @@ img {
     display: block;
 }
 
-
-
-
-.faq__btn {
-    width: 100%;
-    background-color: inherit;
-    padding-top: 19px;
-    padding-bottom: 13px;
-    padding-right: 20px;
-    border: 0;
-    border-top: 1px solid rgba(36, 42, 69, 0.15);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-.faq__btn:nth-child(4) {
-    border-bottom: 1px solid rgba(36, 42, 69, 0.15);
-}
-.faq__btn:hover .faq__btn__text {
-    color: var(--btn-color);
-}
-.faq__btn:active .faq__btn__text {
-    opacity: 0.6;
-}
-
-.faq__btn__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.faq__btn__text {
-    font-size: 18px;
-    line-height: 32px;
-    color: var(--text-dark);
-}
-
-/* FAQ description  */
-.faq__btn__description {
-    display: none;
-    font-size: 16px;
-    line-height: 36px;
-    letter-spacing: 0.15px;
-    color: var(--text-darker);
-    margin-top: 32px;
-    margin-bottom: 29px;
-}
-.js__faq__btn__description {
-    display: block;
-}
-
-.path {
-    color: var(--brand-color);
-}
-
-.faq-svg.rotate {
-    transform: rotate(180deg);
-  }
-
-  .faq-svg.rotate path {
-    stroke: var(--btn-color);
-  }
 /* FAQ main btn */
 .faq__main-btn {
     display: flex;
@@ -722,5 +663,47 @@ img {
 .cta__btn:hover {
     border-color: var(--btn-color);
     background-color: #fff;
+    color: var(--btn-color);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--text-dark);
+    padding-top: 32px;
+    padding-bottom: 25px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__sitenav--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-right: 65px;
+}
+
+.socials-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.socials__item:nth-child(1) {
+    margin-right: 40px;
+}
+
+.footer__link,
+.socials__link {
+    color: #fff;
+}
+
+.footer__link:hover,
+.socials__link:hover {
     color: var(--btn-color);
 }
